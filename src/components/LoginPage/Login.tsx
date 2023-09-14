@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import { View, TextInput, TouchableOpacity, Text } from 'react-native';
 import styles from './styles';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import Logo from '../../assets/logo.png';
+import { View, TextInput, TouchableOpacity, Text } from 'react-native';
+import React, { useState } from 'react';
 
-export default function LoginPage() {
+export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
