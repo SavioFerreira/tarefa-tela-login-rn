@@ -18,13 +18,13 @@ export default function Login() {
           <Text style={styles.subTitle}>Prof. Sandro TC</Text>
           <Text style={styles.titleLogin}> Fazer Login</Text>
         </View>
-        <TextInput style={styles.input}
+        <TextInput style={styles.inputEmail}
           placeholder="Email"
           onChangeText={text => setEmail(text)}
           value={email}
         />
         <View style={styles.subContainer}>
-          <TextInput style={styles.input}
+          <TextInput style={styles.inputSenha}
             placeholder="Password"
             secureTextEntry={!showPassword}
             onChangeText={text => setPassword(text)}
@@ -34,11 +34,11 @@ export default function Login() {
             <Icon name={showPassword ? 'eye-slash' : 'eye'} size={20} />
           </TouchableOpacity>
         </View>
-        <View style={styles.salvarSenha}>
-          <TouchableOpacity style={styles.lembrar} onPress={() => setSavePassword(!savePassword)}>
+        <View style={styles.lembrar}>
+          <TouchableOpacity style={styles.lembrarBox} onPress={() => setSavePassword(!savePassword)}>
             <Icon name={savePassword ? 'check-square-o' : 'square-o'} size={20} />
           </TouchableOpacity>
-          <Text>Salvar senha</Text>
+          <Text>lembrar</Text>
         </View>
         <TouchableOpacity style={styles.button} onPress={() => console.log(email, password)}>
           <Text style={styles.textButton} >Login</Text>

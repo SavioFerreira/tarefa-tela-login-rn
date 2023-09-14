@@ -44,7 +44,19 @@ export default StyleSheet.create({
     margin: 10
   }, 
 
-  input: {
+  inputEmail: {
+    height: 45,
+    alignSelf: 'flex-start',
+    borderColor: 'gray',
+    borderWidth: 1,
+    borderRadius: 6,
+    fontSize: 20,
+    width: '81%',
+    margin: 10,
+    padding: 5,
+
+  },
+  inputSenha: {
     height: 45,
     alignSelf: 'flex-start',
     borderColor: 'gray',
@@ -68,7 +80,7 @@ export default StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold'
   },
-  salvarSenha: {
+  lembrar: {
     flexDirection: 'row',
     justifyContent: 'flex-start',
     marginLeft: 10,
@@ -76,7 +88,7 @@ export default StyleSheet.create({
     alignSelf: 'auto'
   },
 
-  lembrar: {
+  lembrarBox: {
     marginRight: 10
   },
 
