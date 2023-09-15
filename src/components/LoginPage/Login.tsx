@@ -1,8 +1,8 @@
 import styles from './styles';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import img from '../../assets/logo.png';
 import { View, TextInput, TouchableOpacity, Text } from 'react-native';
 import React, { useState } from 'react';
+
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -10,6 +10,10 @@ export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
   const [savePassword, setSavePassword] = useState(false);
 
+  const clearInput = () => {
+    setEmail('');
+    setPassword('');
+  }
   return (
     <View style={styles.main}>
       <View style={styles.container}>
@@ -18,29 +22,39 @@ export default function Login() {
           <Text style={styles.subTitle}>Prof. Sandro TC</Text>
           <Text style={styles.titleLogin}> Fazer Login</Text>
         </View>
-        <TextInput style={styles.inputEmail}
-          placeholder="Email"
-          onChangeText={text => setEmail(text)}
-          value={email}
-        />
+        <Text style={styles.label}>Email</Text>
         <View style={styles.subContainer}>
-          <TextInput style={styles.inputSenha}
+          <TextInput style={styles.input}
+            placeholder="Email"
+            onChangeText={text => setEmail(text)}
+            value={email}
+          />
+        </View>
+        <Text style={styles.label}>Password</Text>
+        <View style={styles.subContainer}>
+          <TextInput style={styles.inputPass}
             placeholder="Password"
             secureTextEntry={!showPassword}
             onChangeText={text => setPassword(text)}
             value={password}
           />
-          <TouchableOpacity style={styles.subContainer} onPress={() => setShowPassword(!showPassword)}>
+          <TouchableOpacity style={styles.iconEye} 
+            onPress={() => setShowPassword(!showPassword)}
+            >
             <Icon name={showPassword ? 'eye-slash' : 'eye'} size={20} />
           </TouchableOpacity>
         </View>
-        <View style={styles.lembrar}>
-          <TouchableOpacity style={styles.lembrarBox} onPress={() => setSavePassword(!savePassword)}>
+        <View style={styles.salvarSenha}>
+          <TouchableOpacity style={styles.lembrar} 
+          onPress={() => setSavePassword(!savePassword)}
+          >
             <Icon name={savePassword ? 'check-square-o' : 'square-o'} size={20} />
           </TouchableOpacity>
-          <Text>lembrar</Text>
+          <Text>Lembrar senha</Text>
         </View>
-        <TouchableOpacity style={styles.button} onPress={() => console.log(email, password)}>
+        <TouchableOpacity style={styles.button} 
+        onPress={() => clearInput()}
+        >
           <Text style={styles.textButton} >Login</Text>
         </TouchableOpacity>
       </View>

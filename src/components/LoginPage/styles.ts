@@ -3,6 +3,7 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
   main: {
     width: '100%',
+    height: '100%',
     backgroundColor: 'blueviolet',
     flexDirection: 'row',
     alignItems: 'center',
@@ -11,17 +12,11 @@ export default StyleSheet.create({
   },
   container: {
     backgroundColor: 'white',
-    width: '100%',
-    marginTop: 30,
-    borderTopEndRadius: 30,
-    borderTopLeftRadius: 30,
+    width: '90%',
+    margin: 30,
+    borderRadius: 30,
+    alignItems: 'center'
   },
-  subContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    width: '90%'
-},
   title: {
     fontSize: 30,
     alignSelf: 'center',
@@ -43,29 +38,39 @@ export default StyleSheet.create({
     color: 'purple',
     margin: 10
   }, 
-
-  inputEmail: {
-    height: 45,
-    alignSelf: 'flex-start',
-    borderColor: 'gray',
-    borderWidth: 1,
-    borderRadius: 6,
+  label: {
+    width: '90%',
     fontSize: 20,
-    width: '81%',
-    margin: 10,
-    padding: 5,
-
-  },
-  inputSenha: {
+    alignSelf: 'center'
+  }, 
+  subContainer: {
+    flexDirection: 'row',
+    width: '90%',
     height: 45,
-    alignSelf: 'flex-start',
+    alignItems: 'center',
     borderColor: 'gray',
     borderWidth: 1,
     borderRadius: 6,
+    margin: 10,
+    padding: 5
+  },
+  inputPass: {
+    fontSize: 20,
+    height: 45,
+    width: '85%'
+  },
+  iconEye: {
+    width: '15%',
+    height: 45,
+    alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  
+  input: {
+    height: 45,
     fontSize: 20,
     width: '90%',
-    margin: 10,
-    padding: 5,
   },
   button: {
     backgroundColor: 'blueviolet',
@@ -80,7 +85,7 @@ export default StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold'
   },
-  lembrar: {
+  salvarSenha: {
     flexDirection: 'row',
     justifyContent: 'flex-start',
     marginLeft: 10,
@@ -88,7 +93,7 @@ export default StyleSheet.create({
     alignSelf: 'auto'
   },
 
-  lembrarBox: {
+  lembrar: {
     marginRight: 10
   },
 
